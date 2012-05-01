@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+/*
+@import url(http://fonts.googleapis.com/css?family=Share);
+@import url(http://fonts.googleapis.com/css?family=Graduate);
+*/
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 12px;
+}
+canvas {
+    display: block;
+}
+#appInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px 10px 7px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+}
+#radar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 220px;
+    height: 220px;
+}

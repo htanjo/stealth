@@ -22,7 +22,7 @@
         var self = this;
         var loader = new THREE.JSONLoader();
         loader.load(
-            'data/enemy.js',
+            'data/enemy.json',
             function (geo) {
                 //geo.computeVertexNormals();
                 for (var i = 0; i < geo.materials.length; i++) {

@@ -2,14 +2,15 @@
  * Class for Stage.
  * @author htanjo
  */
-(function () {
-
+define([
+    'three'
+], function () {
     /**
      * Create a stage.
-     * @class Stealth.Stage
+     * @class Stage
      * @augments THREE.Object3D
      */
-    Stealth.Stage = function (mapOffset, mapSize, blockMap) {
+    var Stage = function (mapOffset, mapSize, blockMap) {
 
         var chipSize = 100,
             groundTexture = 'img/ground_00_top.jpg',
@@ -27,8 +28,8 @@
 
     };
 
-    Stealth.Stage.prototype = new THREE.Object3D();
-    Stealth.Stage.prototype.constructor = Stealth.Stage;
+    Stage.prototype = new THREE.Object3D();
+    Stage.prototype.constructor = Stage;
 
     /**
      * Set map-chips in array.
@@ -36,7 +37,7 @@
      * @param {Number} chipSize Size of map chip.
      * @param {Array} textures Array of texture file path.
      */
-    Stealth.Stage.prototype.setMapChips = function (map, chipSize, textures) {
+    Stage.prototype.setMapChips = function (map, chipSize, textures) {
 
         var blocks = [],
             block = {},
@@ -81,7 +82,7 @@
      * @param {Number} chipSize Size of map chip.
      * @param {Array} texture Array of texture file path.
      */
-    Stealth.Stage.prototype.setGround = function (map, offset, size, chipSize, texture) {
+    Stage.prototype.setGround = function (map, offset, size, chipSize, texture) {
 
         var self = this;
         var ground = {},
@@ -159,4 +160,6 @@
         };
     };
 
-}());
+    return Stage;
+
+});

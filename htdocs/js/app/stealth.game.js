@@ -2,7 +2,16 @@
  * Class for Game.
  * @author htanjo
  */
-(function () {
+define([
+    'app/stealth.camera',
+    'app/stealth.enemy',
+    'app/stealth.input',
+    'app/stealth.pc',
+    'app/stealth.radar',
+    'app/stealth.stage',
+    'three',
+    'lib/Stats'
+], function (Camera, Enemy, Input, PC, Radar, Stage) {
 
     var stageData,
         camera,
@@ -11,21 +20,22 @@
         stage,
         pc,
         enemies = [],
-        input = new Stealth.Input(),
+        input = new Input(),
         position = new THREE.Vector2(0, 0),
         velocity = new THREE.Vector2(0, 0),
         mapOffset,
         mapSize,
         block,
         collision,
-        radar;
+        radar,
+        debug = true;
 
     /**
      * Create a game content.
-     * @class Stealth.Game
+     * @class Game
      * @param {Object} data Game stage data.
      */
-    Stealth.Game = function (data) {
+    var Game = function (data) {
 
         stageData = data.stage;
 
@@ -37,7 +47,7 @@
 
         initialize3D();
         initializeRadar();
-        if (Stealth.debug) {
+        if (debug) {
             initializeStats();
         }
 
@@ -46,7 +56,7 @@
     /**
      * Start game.
      */
-    Stealth.Game.prototype.start = function () {
+    Game.prototype.start = function () {
 
         onEnterFrame();
 
@@ -77,19 +87,19 @@
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(0x001111, 0.0013);
 
-        camera = new Stealth.Camera(55, window.innerWidth / window.innerHeight, 10, 10000);
+        camera = new Camera(55, window.innerWidth / window.innerHeight, 10, 10000);
         scene.add(camera);
 
-        stage = new Stealth.Stage(mapOffset, mapSize, block);
+        stage = new Stage(mapOffset, mapSize, block);
         scene.add(stage);
 
-        pc = new Stealth.PC();
+        pc = new PC();
         pc.position.x = position.x;
         pc.position.z = position.y;
         scene.add(pc);
 
         for (i = 0; i < stageData.enemy.length; i++) {
-            enemies[i] = new Stealth.Enemy(stageData.enemy[i]);
+            enemies[i] = new Enemy(stageData.enemy[i]);
             scene.add(enemies[i]);
         }
 
@@ -201,7 +211,7 @@
 
     /**
      * Set velocity by key inputs.
-     * @param {Stealth.Input} input
+     * @param {Input} input
      */
     function setVelocity(input) {
 
@@ -374,7 +384,7 @@
      */
     function initializeRadar() {
 
-        radar = new Stealth.Radar(block);
+        radar = new Radar(block);
         document.body.appendChild(radar.getDomElement());
 
     }
@@ -398,4 +408,6 @@
 
     }
 
-}());
+    return Game;
+
+});

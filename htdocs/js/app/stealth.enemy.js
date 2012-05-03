@@ -2,7 +2,9 @@
  * Class for Enemy.
  * @author htanjo
  */
-(function () {
+define([
+    'three'
+], function () {
 
     var body = {},
         shadow = {},
@@ -11,11 +13,11 @@
 
     /**
      * Create a Enemy.
-     * @class Stealth.Enemy
+     * @class Enemy
      * @param {Object} data
      * @augments THREE.Object3D
      */
-    Stealth.Enemy = function (data) {
+    var Enemy = function (data) {
 
         THREE.Object3D.call(this);
 
@@ -58,15 +60,15 @@
 
     };
 
-    Stealth.Enemy.prototype = new THREE.Object3D();
-    Stealth.Enemy.prototype.constructor = Stealth.Enemy;
+    Enemy.prototype = new THREE.Object3D();
+    Enemy.prototype.constructor = Enemy;
 
     /**
      * Set enemy position.
      * @param x
      * @param y
      */
-    Stealth.Enemy.prototype.setPosition = function (x, y) {
+    Enemy.prototype.setPosition = function (x, y) {
         this.position.x = x;
         this.position.z = y;
     };
@@ -75,7 +77,7 @@
      * Get enemy position.
      * @return {Object}
      */
-    Stealth.Enemy.prototype.getPosition = function () {
+    Enemy.prototype.getPosition = function () {
         return {x: this.position.x, y: this.position.z};
     };
 
@@ -83,7 +85,7 @@
      * Set enemy rotation.
      * @param degree
      */
-    Stealth.Enemy.prototype.setRotation = function (degree) {
+    Enemy.prototype.setRotation = function (degree) {
         this.rotation.y = -degree / 180 * Math.PI;
     };
 
@@ -91,7 +93,7 @@
      * Get enemy rotation.
      * @return {Number}
      */
-    Stealth.Enemy.prototype.getPosition = function () {
+    Enemy.prototype.getPosition = function () {
         return -this.rotation.y / Math.PI * 180;
     };
 
@@ -99,14 +101,14 @@
      * Set action pattern action.
      * @param queue
      */
-    Stealth.Enemy.prototype.setAction = function (queue) {
+    Enemy.prototype.setAction = function (queue) {
         action = queue;
     };
 
     /**
      * Act.
      */
-    Stealth.Enemy.prototype.move = function () {
+    Enemy.prototype.move = function () {
 
         var moveSpeed = 2,
             rotateSpeed = 2;
@@ -115,4 +117,6 @@
 
     };
 
-}());
+    return Enemy;
+
+});

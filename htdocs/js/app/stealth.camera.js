@@ -2,16 +2,19 @@
  * Class for Camera.
  * @author htanjo
  */
-(function () {
+define([
+    'three',
+    'tween'
+], function () {
 
     var cameraTween;
 
     /**
      * Create a camera.
-     * @class Stealth.Camera
+     * @class Camera
      * @augments THREE.PerspectiveCamera
      */
-    Stealth.Camera = function (fov, aspect, near, far) {
+    var Camera = function (fov, aspect, near, far) {
 
         THREE.PerspectiveCamera.call(this, fov, aspect, near, far);
 
@@ -23,14 +26,14 @@
 
     };
 
-    Stealth.Camera.prototype = new THREE.PerspectiveCamera();
-    Stealth.Camera.prototype.constructor = Stealth.Camera;
+    Camera.prototype = new THREE.PerspectiveCamera();
+    Camera.prototype.constructor = Camera;
 
     /**
      * Move camera.
      * @param {THREE.Object3D} target
      */
-    Stealth.Camera.prototype.move = function (target) {
+    Camera.prototype.move = function (target) {
 
         this.position.x = target.position.x + this.aim.position.x;
         this.position.y = target.position.y + this.aim.position.y;
@@ -48,7 +51,7 @@
      * Change camera mode.
      * @param {String} mode
      */
-    Stealth.Camera.prototype.changeMode = function (mode) {
+    Camera.prototype.changeMode = function (mode) {
 
         switch (mode) {
             case 'overlook':
@@ -107,4 +110,6 @@
 
     };
 
-}());
+    return Camera;
+
+});

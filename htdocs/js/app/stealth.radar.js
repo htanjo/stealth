@@ -2,7 +2,7 @@
  * Class for Radar.
  * @author htanjo
  */
-(function () {
+define(function () {
 
     var canvas,
         context,
@@ -10,10 +10,10 @@
 
     /**
      * Create a radar.
-     * @class Stealth.Radar
+     * @class Radar
      * @param {Array} mapData Map array data.
      */
-    Stealth.Radar = function (mapData) {
+    var Radar = function (mapData) {
 
         canvas = document.createElement('canvas');
         canvas.setAttribute('id', 'radar');
@@ -29,7 +29,7 @@
     /**
      * Get DOM element.
      */
-    Stealth.Radar.prototype.getDomElement = function () {
+    Radar.prototype.getDomElement = function () {
 
         return canvas;
 
@@ -38,7 +38,7 @@
     /**
      * Update rendering.
      */
-    Stealth.Radar.prototype.render = function (pc, enemies) {
+    Radar.prototype.render = function (pc, enemies) {
 
         clear();
         renderBase();
@@ -235,4 +235,6 @@
         context.restore();
     }
 
-}());
+    return Radar;
+
+});

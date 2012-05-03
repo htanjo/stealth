@@ -2,7 +2,10 @@
  * Class for Player-Character.
  * @author htanjo
  */
-(function () {
+define([
+    'three',
+    'tween'
+], function () {
 
     var radius = 25,
         height = 80,
@@ -13,10 +16,10 @@
 
     /**
      * Create a Player-Character.
-     * @class Stealth.PC
+     * @class PC
      * @augments THREE.Object3D
      */
-    Stealth.PC = function () {
+    var PC = function () {
 
         var textures = [
                 'img/can_00_side.jpg',
@@ -74,15 +77,15 @@
 
     };
 
-    Stealth.PC.prototype = new THREE.Object3D();
-    Stealth.PC.prototype.constructor = Stealth.PC;
+    PC.prototype = new THREE.Object3D();
+    PC.prototype.constructor = PC;
 
     /**
      * Move Player-Character.
      * @param {THREE.Vector3} position
      * @param {THREE.Vector3} velocity
      */
-    Stealth.PC.prototype.move = function (position, velocity) {
+    PC.prototype.move = function (position, velocity) {
 
         var isMoved = isMoving;
         isMoving = velocity.length() ? true : false;
@@ -137,4 +140,6 @@
 
     }
 
-}());
+    return PC;
+
+});

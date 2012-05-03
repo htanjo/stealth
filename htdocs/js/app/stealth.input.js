@@ -2,13 +2,13 @@
  * Class for Key inputs.
  * @author htanjo
  */
-(function () {
+define(function () {
 
     /**
      * Create a key input listener.
-     * @class Stealth.Input
+     * @class Input
      */
-    Stealth.Input = function () {
+    var Input = function () {
 
         var self = this;
 
@@ -56,4 +56,6 @@
 
     };
 
-}());
+    return Input;
+
+});

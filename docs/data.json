@@ -1,0 +1,562 @@
+{
+    "project": {
+        "name": "Stealth",
+        "description": "Stealth action game based on WebGL.",
+        "version": "0.2.0",
+        "url": "http://htanjo.github.com/stealth/",
+        "options": {
+            "paths": "src/js/app",
+            "outdir": "docs"
+        }
+    },
+    "files": {
+        "src/js/app/stealth.camera.js": {
+            "name": "src/js/app/stealth.camera.js",
+            "modules": {},
+            "classes": {
+                "Camera": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.enemy.js": {
+            "name": "src/js/app/stealth.enemy.js",
+            "modules": {},
+            "classes": {
+                "Enemy": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.game.js": {
+            "name": "src/js/app/stealth.game.js",
+            "modules": {},
+            "classes": {
+                "Game": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.input.js": {
+            "name": "src/js/app/stealth.input.js",
+            "modules": {},
+            "classes": {
+                "Input": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.js": {
+            "name": "src/js/app/stealth.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {
+                "Stealth Application namespace.": 1
+            }
+        },
+        "src/js/app/stealth.pc.js": {
+            "name": "src/js/app/stealth.pc.js",
+            "modules": {},
+            "classes": {
+                "Stealth Application namespace..PC": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.radar.js": {
+            "name": "src/js/app/stealth.radar.js",
+            "modules": {},
+            "classes": {
+                "Stealth Application namespace..Radar": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/js/app/stealth.stage.js": {
+            "name": "src/js/app/stealth.stage.js",
+            "modules": {},
+            "classes": {
+                "Stealth Application namespace..Stage": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Camera": {
+            "name": "Camera",
+            "shortname": "Camera",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/app/stealth.camera.js",
+            "line": 12,
+            "description": "Create a camera.",
+            "uses": [
+                "THREE.PerspectiveCamera"
+            ]
+        },
+        "Enemy": {
+            "name": "Enemy",
+            "shortname": "Enemy",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 14,
+            "description": "Create a Enemy.",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "uses": [
+                "THREE.Object3D"
+            ]
+        },
+        "Game": {
+            "name": "Game",
+            "shortname": "Game",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/app/stealth.game.js",
+            "line": 33,
+            "description": "Create a game content.",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "Game stage data.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "Input": {
+            "name": "Input",
+            "shortname": "Input",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/app/stealth.input.js",
+            "line": 7,
+            "description": "Create a key input listener."
+        },
+        "Stealth Application namespace..PC": {
+            "name": "Stealth Application namespace..PC",
+            "shortname": "PC",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "Stealth Application namespace.",
+            "file": "src/js/app/stealth.pc.js",
+            "line": 17,
+            "description": "Create a Player-Character.",
+            "uses": [
+                "THREE.Object3D"
+            ]
+        },
+        "Stealth Application namespace..Radar": {
+            "name": "Stealth Application namespace..Radar",
+            "shortname": "Radar",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "Stealth Application namespace.",
+            "file": "src/js/app/stealth.radar.js",
+            "line": 11,
+            "description": "Create a radar.",
+            "params": [
+                {
+                    "name": "mapData",
+                    "description": "Map array data.",
+                    "type": "Array"
+                }
+            ]
+        },
+        "Stealth Application namespace..Stage": {
+            "name": "Stealth Application namespace..Stage",
+            "shortname": "Stage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "Stealth Application namespace.",
+            "file": "src/js/app/stealth.stage.js",
+            "line": 8,
+            "description": "Create a stage.",
+            "uses": [
+                "THREE.Object3D"
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/js/app/stealth.camera.js",
+            "line": 1,
+            "description": "Class for Camera.",
+            "author": "htanjo",
+            "class": "Camera"
+        },
+        {
+            "file": "src/js/app/stealth.camera.js",
+            "line": 32,
+            "description": "Move camera.",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "",
+                    "type": "THREE.Object3D"
+                }
+            ],
+            "class": "Camera"
+        },
+        {
+            "file": "src/js/app/stealth.camera.js",
+            "line": 50,
+            "description": "Change camera mode.",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "class": "Camera"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 1,
+            "description": "Class for Enemy.",
+            "author": "htanjo",
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 66,
+            "description": "Set enemy position.",
+            "params": [
+                {
+                    "name": "x",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 76,
+            "description": "Get enemy position.",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 84,
+            "description": "Set enemy rotation.",
+            "params": [
+                {
+                    "name": "degree",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 92,
+            "description": "Get enemy rotation.",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 100,
+            "description": "Set action pattern action.",
+            "params": [
+                {
+                    "name": "queue",
+                    "description": ""
+                }
+            ],
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.enemy.js",
+            "line": 108,
+            "description": "Act.",
+            "class": "Enemy"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 1,
+            "description": "Class for Game.",
+            "author": "htanjo",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 56,
+            "description": "Start game.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 65,
+            "description": "onEnterFrame event shim.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 75,
+            "description": "Initialize 3D.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 140,
+            "description": "Rendering.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 168,
+            "description": "Move Player-Character.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 199,
+            "description": "Move Enemies.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 212,
+            "description": "Set velocity by key inputs.",
+            "params": [
+                {
+                    "name": "input",
+                    "description": "",
+                    "type": "Input"
+                }
+            ],
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 251,
+            "description": "Revise velocity by collision.",
+            "params": [
+                {
+                    "name": "position",
+                    "description": "",
+                    "type": "THREE.Vector2"
+                }
+            ],
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 370,
+            "description": "Get map state from coordinates",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "State.",
+                "type": "Number"
+            },
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 382,
+            "description": "Initialize radar.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.game.js",
+            "line": 392,
+            "description": "Initialize debug stats.",
+            "class": "Game"
+        },
+        {
+            "file": "src/js/app/stealth.input.js",
+            "line": 1,
+            "description": "Class for Key inputs.",
+            "author": "htanjo",
+            "class": "Input"
+        },
+        {
+            "file": "src/js/app/stealth.js",
+            "line": 1,
+            "description": "Namespace for this application.",
+            "author": "htanjo",
+            "class": "Stealth Application namespace..PC"
+        },
+        {
+            "file": "src/js/app/stealth.js",
+            "line": 6,
+            "class": "Stealth Application namespace..PC",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.js",
+            "line": 13,
+            "class": "Stealth Application namespace..PC",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.js",
+            "line": 16,
+            "class": "Stealth Application namespace..PC",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.pc.js",
+            "line": 1,
+            "description": "Class for Player-Character.",
+            "author": "htanjo",
+            "class": "Stealth Application namespace..PC",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.pc.js",
+            "line": 83,
+            "description": "Move Player-Character.",
+            "params": [
+                {
+                    "name": "position",
+                    "description": "",
+                    "type": "THREE.Vector3"
+                },
+                {
+                    "name": "velocity",
+                    "description": "",
+                    "type": "THREE.Vector3"
+                }
+            ],
+            "class": "Stealth Application namespace..PC",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.radar.js",
+            "line": 1,
+            "description": "Class for Radar.",
+            "author": "htanjo",
+            "class": "Stealth Application namespace..Radar",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.radar.js",
+            "line": 29,
+            "description": "Get DOM element.",
+            "class": "Stealth Application namespace..Radar",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.radar.js",
+            "line": 38,
+            "description": "Update rendering.",
+            "class": "Stealth Application namespace..Radar",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.stage.js",
+            "line": 1,
+            "description": "Class for Stage.",
+            "author": "htanjo",
+            "class": "Stealth Application namespace..Stage",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.stage.js",
+            "line": 34,
+            "description": "Set map-chips in array.",
+            "params": [
+                {
+                    "name": "map",
+                    "description": "Arrangement map of 2x2 array.",
+                    "type": "Array"
+                },
+                {
+                    "name": "chipSize",
+                    "description": "Size of map chip.",
+                    "type": "Number"
+                },
+                {
+                    "name": "textures",
+                    "description": "Array of texture file path.",
+                    "type": "Array"
+                }
+            ],
+            "class": "Stealth Application namespace..Stage",
+            "namespace": "Stealth Application namespace."
+        },
+        {
+            "file": "src/js/app/stealth.stage.js",
+            "line": 78,
+            "description": "Set ground.",
+            "params": [
+                {
+                    "name": "offset",
+                    "description": "Offset position of ground.",
+                    "type": "THREE.Vector2"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of ground.",
+                    "type": "THREE.Vector2"
+                },
+                {
+                    "name": "chipSize",
+                    "description": "Size of map chip.",
+                    "type": "Number"
+                },
+                {
+                    "name": "texture",
+                    "description": "Array of texture file path.",
+                    "type": "Array"
+                }
+            ],
+            "class": "Stealth Application namespace..Stage",
+            "namespace": "Stealth Application namespace."
+        }
+    ]
+}

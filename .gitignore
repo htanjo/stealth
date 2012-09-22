@@ -1,2 +1,8 @@
+# JetBrains IDE
 .idea
-docs
+
+# Node.js modules
+node_modules
+
+# Mac OSX
+.DS_Store

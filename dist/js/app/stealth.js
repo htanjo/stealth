@@ -1,0 +1,1 @@
+var Stealth=Stealth||{};(function(){Stealth.version="0.2.0",Stealth.debug=!0})()

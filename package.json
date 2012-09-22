@@ -1,0 +1,22 @@
+{
+    "name": "stealth",
+    "title": "Stealth",
+    "description": "Stealth action game based on WebGL.",
+    "version": "0.2.0",
+    "author": "htanjo",
+    "homepage": "http://htanjo.github.com/stealth/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/htanjo/stealth.git"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.3.15",
+        "grunt-contrib": ">=0.2.0",
+        "phantomjs": "*"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": ">=0.6.0"
+    }
+}

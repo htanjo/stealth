@@ -5,9 +5,9 @@
 
 require.config({
     paths: {
-        jquery: 'lib/jquery-1.7.2',
-        three: 'lib/Three',
-        tween: 'lib/Tween'
+        jquery: 'libs/jquery-1.7.2',
+        three: 'libs/Three',
+        tween: 'libs/Tween'
     }
 });
 
